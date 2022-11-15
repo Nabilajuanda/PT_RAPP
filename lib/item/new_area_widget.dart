@@ -1,8 +1,14 @@
 import 'package:flutter/material.dart';
+import 'package:pt_rapp_area/item/update_delete_area_item.dart';
 
-class NewAreaItem extends StatelessWidget {
+class NewAreaItem extends StatefulWidget {
   const NewAreaItem({Key? key}) : super(key: key);
 
+  @override
+  State<NewAreaItem> createState() => _NewAreaItemState();
+}
+
+class _NewAreaItemState extends State<NewAreaItem> {
   @override
   Widget build(BuildContext context) {
     return Container(
@@ -43,15 +49,21 @@ class NewAreaItem extends StatelessWidget {
             mainAxisAlignment: MainAxisAlignment.end,
             children: [
               Container(
-                  padding: const EdgeInsets.all(1),
-                  decoration: BoxDecoration(
-                    borderRadius: BorderRadius.circular(5),
-                    border: Border.all(color: Colors.black, width: 1),
-                  ),
-                  child: const Icon(
-                    Icons.more_horiz,
-                    size: 15,
-                  )),
+                height: 26,
+                width: 26,
+                decoration: BoxDecoration(
+                  borderRadius: BorderRadius.circular(5),
+                  border: Border.all(color: Colors.black, width: 1),
+                ),
+                child: IconButton(
+                  icon: const Icon(Icons.more_horiz),
+                  padding: const EdgeInsets.all(5),
+                  iconSize: 15,
+                  onPressed: () {
+                    UpdateDeleteAreaItem.updateDeleteDialog(context);
+                  },
+                ),
+              ),
             ],
           ),
           Row(

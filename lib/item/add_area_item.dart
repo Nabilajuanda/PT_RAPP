@@ -91,10 +91,14 @@ class AddAreaItem {
                     style: ButtonStyle(
                       backgroundColor: MaterialStateProperty.all(
                           const Color.fromARGB(229, 58, 0, 229)),
-                      shape: MaterialStateProperty.all(RoundedRectangleBorder(
-                          borderRadius: BorderRadius.circular(10))),
-                      side: MaterialStateProperty.all(const BorderSide(
-                          color: Color.fromARGB(229, 58, 0, 229))),
+                      shape: MaterialStateProperty.all(
+                        RoundedRectangleBorder(
+                            borderRadius: BorderRadius.circular(10)),
+                      ),
+                      side: MaterialStateProperty.all(
+                        const BorderSide(
+                            color: Color.fromARGB(229, 58, 0, 229)),
+                      ),
                     ),
                     child: const Text(
                       'Add Area',
