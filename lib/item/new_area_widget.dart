@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:pt_rapp_area/item/update_delete_area_item.dart';
 
 class NewAreaItem extends StatefulWidget {
   const NewAreaItem({Key? key}) : super(key: key);
@@ -55,13 +54,37 @@ class _NewAreaItemState extends State<NewAreaItem> {
                   borderRadius: BorderRadius.circular(5),
                   border: Border.all(color: Colors.black, width: 1),
                 ),
-                child: IconButton(
-                  icon: const Icon(Icons.more_horiz),
-                  padding: const EdgeInsets.all(5),
+                child: PopupMenuButton(
+                  offset: const Offset(0, 40),
                   iconSize: 15,
-                  onPressed: () {
-                    UpdateDeleteAreaItem.updateDeleteDialog(context);
-                  },
+                  itemBuilder: (_) => <PopupMenuItem<String>>[
+                    PopupMenuItem<String>(
+                      value: 'Update',
+                      child: Row(
+                        children: const [
+                          Icon(Icons.update),
+                          SizedBox(
+                            width: 5,
+                          ),
+                          Text('Update'),
+                        ],
+                      ),
+                    ),
+                    PopupMenuItem(
+                      value: 'Delete',
+                      child: Row(
+                        children: const [
+                          Icon(Icons.delete),
+                          SizedBox(
+                            width: 5,
+                          ),
+                          Text('Delete'),
+                        ],
+                      ),
+                    )
+                  ],
+                  onSelected: (_) {},
+                  child: const Icon(Icons.more_horiz),
                 ),
               ),
             ],

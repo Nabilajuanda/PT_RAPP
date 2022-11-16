@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:pt_rapp_area/page/area_page.dart';
+import 'package:pt_rapp_area/page/users_page.dart';
 
 void main() {
   runApp(const MyApp());
@@ -19,6 +20,7 @@ class MyApp extends StatelessWidget {
       initialRoute: AreaPage.routeName,
       routes: {
         AreaPage.routeName: (context) => const AreaPage(),
+        UsersPage.routeName: (context) => const UsersPage(),
       },
     );
   }

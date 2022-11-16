@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:pt_rapp_area/item/add_area_item.dart';
 import 'package:pt_rapp_area/item/new_area_widget.dart';
+import 'package:pt_rapp_area/page/users_page.dart';
 
 class AreaPage extends StatefulWidget {
   static const routeName = '/area_page';
@@ -89,7 +90,10 @@ class _AreaStatePage extends State<AreaPage> {
               Expanded(
                 flex: 4,
                 child: TextButton(
-                  onPressed: () {},
+                  onPressed: () {
+                    Navigator.pushNamed(context, UsersPage.routeName,
+                        arguments: const UsersPage());
+                  },
                   child: const Text(
                     'Users',
                     style: TextStyle(
