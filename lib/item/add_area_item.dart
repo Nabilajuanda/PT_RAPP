@@ -3,7 +3,7 @@ import 'package:flutter/material.dart';
 enum Action { add, cancel }
 
 class AddAreaItem {
-  static Future<Action> addCancelDialog(
+  static Future<Action> addAreaDialog(
     BuildContext context,
   ) async {
     final action = await showDialog(

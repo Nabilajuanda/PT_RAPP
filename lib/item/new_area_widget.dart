@@ -1,13 +1,13 @@
 import 'package:flutter/material.dart';
 
-class NewAreaItem extends StatefulWidget {
-  const NewAreaItem({Key? key}) : super(key: key);
+class NewAreaWidget extends StatefulWidget {
+  const NewAreaWidget({Key? key}) : super(key: key);
 
   @override
-  State<NewAreaItem> createState() => _NewAreaItemState();
+  State<NewAreaWidget> createState() => _NewAreaWidgetState();
 }
 
-class _NewAreaItemState extends State<NewAreaItem> {
+class _NewAreaWidgetState extends State<NewAreaWidget> {
   @override
   Widget build(BuildContext context) {
     return Container(

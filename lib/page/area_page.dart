@@ -75,7 +75,10 @@ class _AreaStatePage extends State<AreaPage> {
               Expanded(
                 flex: 4,
                 child: TextButton(
-                  onPressed: () {},
+                  onPressed: () {
+                    Navigator.pushNamed(context, AreaPage.routeName,
+                        arguments: const AreaPage());
+                  },
                   child: const Text(
                     'Area',
                     style: TextStyle(
@@ -221,7 +224,7 @@ class _AreaStatePage extends State<AreaPage> {
                             ],
                           ),
                           onPressed: () {
-                            AddAreaItem.addCancelDialog(context);
+                            AddAreaItem.addAreaDialog(context);
                           },
                         ),
                       ),
@@ -231,7 +234,7 @@ class _AreaStatePage extends State<AreaPage> {
               ),
               const Padding(
                 padding: EdgeInsets.only(bottom: 25),
-                child: NewAreaItem(),
+                child: NewAreaWidget(),
               ),
             ],
           ),
