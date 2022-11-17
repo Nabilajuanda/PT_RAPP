@@ -233,7 +233,7 @@ class _UsersStatePage extends State<UsersPage> {
                 ],
               ),
               const Padding(
-                padding: EdgeInsets.only(bottom: 5),
+                padding: EdgeInsets.only(bottom: 25),
                 child: NewUserWidget(),
               ),
             ],

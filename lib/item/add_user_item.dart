@@ -19,20 +19,12 @@ class AddUserItem {
           ),
           content: Column(
             children: [
-              const SizedBox(
-                width: 148,
-                height: 148,
-                child: Icon(
-                  Icons.photo_size_select_actual_outlined,
-                  size: 148,
-                ),
-              ),
               SizedBox(
                 width: 400,
                 height: 64,
                 child: TextField(
                   decoration: InputDecoration(
-                      hintText: 'Full Name',
+                      hintText: 'Area Name',
                       border: OutlineInputBorder(
                           borderRadius: BorderRadius.circular(10))),
                 ),
@@ -42,7 +34,7 @@ class AddUserItem {
                 height: 64,
                 child: TextField(
                   decoration: InputDecoration(
-                      hintText: 'Phone Number',
+                      hintText: 'Code Area',
                       border: OutlineInputBorder(
                           borderRadius: BorderRadius.circular(10))),
                 ),
@@ -52,8 +44,7 @@ class AddUserItem {
                 height: 64,
                 child: TextField(
                   decoration: InputDecoration(
-                      prefixIcon: const Icon(Icons.email_outlined),
-                      hintText: 'Email',
+                      hintText: 'Category Area',
                       border: OutlineInputBorder(
                           borderRadius: BorderRadius.circular(10))),
                 ),
@@ -63,8 +54,7 @@ class AddUserItem {
                 height: 64,
                 child: TextField(
                   decoration: InputDecoration(
-                      prefixIcon: const Icon(Icons.key),
-                      hintText: 'Access Code',
+                      hintText: 'Excavator',
                       border: OutlineInputBorder(
                           borderRadius: BorderRadius.circular(10))),
                 ),
@@ -111,7 +101,7 @@ class AddUserItem {
                       ),
                     ),
                     child: const Text(
-                      'Add Users',
+                      'Add Area',
                       style: TextStyle(
                           color: Colors.white, fontWeight: FontWeight.w500),
                     ),
