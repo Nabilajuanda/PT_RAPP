@@ -41,19 +41,15 @@ class _NewUserWidgetState extends State<NewUserWidget> {
 
   Widget buildAreaItem() {
     return Padding(
-      padding: const EdgeInsets.only(left: 15, bottom: 25, top: 25, right: 15),
+      padding: const EdgeInsets.only(left: 15, bottom: 5, top: 5, right: 15),
       child: Column(
         children: [
           Row(
             mainAxisAlignment: MainAxisAlignment.end,
             children: [
-              Container(
+              SizedBox(
                 height: 26,
                 width: 26,
-                decoration: BoxDecoration(
-                  borderRadius: BorderRadius.circular(5),
-                  border: Border.all(color: Colors.black, width: 1),
-                ),
                 child: PopupMenuButton(
                   offset: const Offset(0, 40),
                   iconSize: 15,
@@ -84,7 +80,7 @@ class _NewUserWidgetState extends State<NewUserWidget> {
                     )
                   ],
                   onSelected: (_) {},
-                  child: const Icon(Icons.more_horiz),
+                  child: const Icon(Icons.more_vert),
                 ),
               ),
             ],
@@ -100,7 +96,7 @@ class _NewUserWidgetState extends State<NewUserWidget> {
                   Padding(
                     padding: EdgeInsets.only(left: 15),
                     child: Text(
-                      'Area',
+                      'Gekyume Onfroy',
                       style:
                           TextStyle(fontWeight: FontWeight.w600, fontSize: 24),
                     ),
@@ -108,7 +104,7 @@ class _NewUserWidgetState extends State<NewUserWidget> {
                   Padding(
                     padding: EdgeInsets.only(left: 15),
                     child: Text(
-                      'Kode Area : Block-A',
+                      'Kode Akses : 6666',
                       style: TextStyle(fontSize: 20),
                     ),
                   ),
@@ -126,20 +122,25 @@ class _NewUserWidgetState extends State<NewUserWidget> {
           ),
           Row(
             children: const [
-              Icon(Icons.photo_size_select_actual_outlined),
+              Icon(Icons.email_outlined),
               Padding(
                 padding: EdgeInsets.only(left: 10),
-                child: Text('Block'),
+                child: Text('gekyumeonfroy666@gmail.com'),
               ),
             ],
           ),
           Row(
             children: const [
-              Icon(Icons.photo_size_select_actual_outlined),
+              Icon(Icons.call_outlined),
               Padding(
                 padding: EdgeInsets.only(left: 10),
-                child: Text('10 Excavator'),
+                child: Text('0851563564556'),
               ),
+            ],
+          ),
+          Row(
+            children: const [
+              Text('Last Activity'),
             ],
           ),
         ],
